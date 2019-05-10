@@ -4,9 +4,13 @@
 <div class="wrapper">
   <div class="container">
     <div class="no-side-nav-column">
-      <h1 class="mt10">Error 404</h1>
-      <p class="mb14">Sorry, but the page you requested doesn't exist.</p>
-      <ul class="list">
+      <div class="mb20">
+        <h1 class="mt10">Error 404</h1>
+        <p class="mt4">Sorry, we couldn't find the page you were looking for.</p>
+        <a href="#home">Back to Home</a>
+      </div>
+
+      <!-- <ul class="list">
         {% for item in config.extra.urbit_menu %}
           <li class="list__item">
             <h2 class="mb6">
@@ -16,9 +20,9 @@
             </h2>
           </li>
         {% endfor %}
-      </ul>
+      </ul> -->
       <!-- footer -->
-      {% include "partials/footer.html" %}
+      <!-- {% include "partials/footer.html" %} -->
     </div>
   </div>
 </div>
