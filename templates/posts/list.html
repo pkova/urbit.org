@@ -4,11 +4,27 @@
 <!-- header -->
 {% include "partials/navigation.html" %}
 <!-- content -->
-<div class="main-wrapper">
-  <div class="wrapper">
-    <div class="container container--fixed content-nav-container">
-      <div id="js-content-nav-toggle" class="content-nav-icon"></div>
-      <nav class="content-nav">
+<div class="grid-2x1 grid-2x1-ns">
+  <!-- <div class="wrapper">
+    <div class="container container--fixed content-nav-container"> -->
+    <div class="1-1">
+      <div class="fix mt10 ml7">
+        <a class="mt2 block" href="{{ config.base_url }}/posts/">
+          All
+        </a>
+        {% for post in terms %}
+            <a class="mt2 block" href="{{ post.permalink }}">
+              {{ post.name }}
+            </a>
+        {% endfor %}
+      </div>
+    </div>
+
+
+      <!--  ARROW -->
+      <!-- <div id="js-content-nav-toggle" class="content-nav-icon"></div> -->
+      <!--  NAV -->
+      <!-- <nav class="content-nav">
         <ul class="list">
           <li class="list__item content-nav__item">
             <a href="{{ config.base_url }}/posts/">
@@ -23,28 +39,31 @@
             </li>
           {% endfor %}
         </ul>
-      </nav>
-      <div class="content-spacer"></div>
-    </div>
-    <div class="container">
-      <div class="content-nav-spacer"></div>
-      <article class="content posts__content">
-        <h1 class="mb8">Posts</h1>
-        <ul class="list">
+      </nav> -->
+      <!-- <div class="content-spacer"></div>
+    </div> -->
+    <div class="2-2 measure-narrow">
+      <!-- <div class="content-nav-spacer"></div> -->
+      <!-- <article class="content posts__content"> -->
+        <h1 class="f1 fw-bold mt4 mb5">Posts</h1>
+        <!-- <ul class="list"> -->
           {% set posts = get_section(path="posts/_index.md") %}
           {% for page in posts.pages %}
-            <li class="list__item mb8">
-              <span class="h4 mt0 mb0 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
-              <span class="h4 mt0 mb0 h-font">{% if page.taxonomies.posts %}
-                {% for post in page.taxonomies.posts %}<a href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
-              {% endif %}</span>
-              <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
-              <p class="mt3">{{ page.description }}</p>
-            </li>
+            <div class="mb8">
+
+              <a href="{{ page.permalink }}"><h2 class="mt1 fw-bold">{{ page.title }}</h2></a>
+              <p class="mv3 f5">{{ page.description }}</p>
+
+              <span class="h4 mb0 mono gray-50">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+              <span class="h4 mt0 mb0">{% if page.taxonomies.posts %}
+                {% for post in page.taxonomies.posts %}<a class="gray-50"  href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
+              {% endif %}
+            </span>
+            </div>
           {% endfor %}
-        </ul>
-      </article>
-    </div>
-  </div>
+        <!-- </ul> -->
+      <!-- </article> -->
+    <!-- </div>
+  </div> -->
 </div>
 {% endblock content %}

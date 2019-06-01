@@ -4,8 +4,8 @@
 <!-- header -->
 {% include "partials/navigation.html" %}
 <!-- content -->
-<div class="main-wrapper">
-  <div class="wrapper">
+<div class="mt6">
+  <div class="rel mv0 mh-auto pv0 ph2 measure-md ml4">
     <div class="container container--fixed content-nav-container">
       <div id="js-content-nav-toggle" class="content-nav-icon"></div>
       <nav class="content-nav">
@@ -36,7 +36,7 @@
     </div>
     <div class="container">
       <div class="content-nav-spacer"></div>
-      <article class="content posts__content">
+      <article class="content posts__content md">
         <h1 class="mb8">{{ term.name }}</h1>
         <ul class="list">
           {% for page in term.pages %}
