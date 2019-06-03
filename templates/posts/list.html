@@ -1,15 +1,50 @@
 {% extends "base.html" %}
-
 {% block content %}
 <!-- header -->
-{% include "partials/navigation.html" %}
+
 <!-- content -->
-<div class="grid-2x1 grid-2x1-ns">
-  <!-- <div class="wrapper">
-    <div class="container container--fixed content-nav-container"> -->
-    <div class="1-1">
-      <div class="fix mt10 ml7">
-        <a class="mt2 block" href="{{ config.base_url }}/posts/">
+  <!-- <header id="main-nav" class="fixed h10 z2 top0"> -->
+
+  <header id="main-nav" class="header">
+    <!-- Panini icon -->
+    <div id="js-main-nav-toggle" class="header__nav-icon"></div>
+    <div class="col-right">
+      <nav class="header__navigation">
+        <!-- First item -->
+            <div class="measure-narrow ml4">
+              {% for item in config.extra.urbit_menu %}
+                <h2 class="mt0 mb6">
+                  <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                    {{ item.name }}
+                  </a>
+                </h2>
+              {% endfor %}
+              </div>
+
+              <section class="mb6">
+                <h4 class="mb1 fw-bold">Follow</h4>
+                <a class="mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
+                <a class="mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
+              </section>
+              <section class="mb6">
+                <h4 class="mb1 fw-bold">Contact</h4>
+                <a class="mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
+              </section>
+              <section class="mb6">
+                <h4 class="mb1 fw-bold">Company</h4>
+                  {% for item in config.extra.urbit_footer %}
+                    <a class="mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                      {{ item.name }}
+                    </a>
+                  {% endfor %}
+              </section>
+      </nav>
+  </header>
+
+    <div class="container container-ns">
+    <div class="col-left col-left-ns">
+      <div class="fix mt9 ml7">
+        <a class="mt9 block" href="{{ config.base_url }}/posts/">
           All
         </a>
         {% for post in terms %}
@@ -19,34 +54,9 @@
         {% endfor %}
       </div>
     </div>
-
-
-      <!--  ARROW -->
-      <!-- <div id="js-content-nav-toggle" class="content-nav-icon"></div> -->
-      <!--  NAV -->
-      <!-- <nav class="content-nav">
-        <ul class="list">
-          <li class="list__item content-nav__item">
-            <a href="{{ config.base_url }}/posts/">
-              All
-            </a>
-          </li>
-          {% for post in terms %}
-            <li class="list__item content-nav__item">
-              <a href="{{ post.permalink }}">
-                {{ post.name }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav> -->
-      <!-- <div class="content-spacer"></div>
-    </div> -->
-    <div class="2-2 measure-narrow">
-      <!-- <div class="content-nav-spacer"></div> -->
-      <!-- <article class="content posts__content"> -->
-        <h1 class="f1 fw-bold mt4 mb5">Posts</h1>
-        <!-- <ul class="list"> -->
+    <div class="col-right col-right-ns mt8">
+      <div class="measure-narrow">
+        <h1 class="f1 mb4 fw-bold">Posts</h1>
           {% set posts = get_section(path="posts/_index.md") %}
           {% for page in posts.pages %}
             <div class="mb8">
@@ -61,9 +71,6 @@
             </span>
             </div>
           {% endfor %}
-        <!-- </ul> -->
-      <!-- </article> -->
-    <!-- </div>
-  </div> -->
-</div>
+      </div>
+    </div>
 {% endblock content %}

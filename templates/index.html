@@ -1,37 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="grid-2x1 grid-2x1-ns">
-  <div class="1-1"></div>
-  <div class="2-2 measure-narrow">
-    <h1 class="f1 fw-bold mt5">Urbit</h1>
-    <p class="f5 bold mb5">A personal server built from scratch.</p>
-    <h2 class="f2 mv4 fw-bold">
-      <a href="{{config.base_url ~ "/primer/"}}">
-        Primer
-      </a>
-    </h2>
-    <p class="f5 mb6">
-      A 10-minute read on what Urbit is and why it exists.
-    </p>
-    <h2 class="f2 mv4 fw-bold">
-      <a href="{{config.base_url ~ "/posts/"}}">
-        Posts
-      </a>
-    </h2>
-    <p class="f5 mb6">
-      Regular updates, occasional essays and media.
-    </p>
-    <h2 class="f2 mv4 fw-bold">
-      <a href="{{config.base_url ~ "/docs/"}}">
-        Docs
-      </a>
-    </h2>
-    <p class="f5 mb6">
-      Installation instructions and complete system documentation.
-    </p>
-    <!-- footer -->
-    {% include "partials/footer.html" %}
+<div class="container container-ns debug">
+  <!-- <div class="1-1"></div> -->
+  <div class="col-full col-full-ns mt8">
+    <div class="measure-narrow">
+      <h1 class="f1 fw-bold">Urbit<//h1>
+      <p class="f5 bold mb5">A personal server built from scratch.</p>
+      <h2 class="f2 mt4 mb2 fw-bold">
+        <a href="{{config.base_url ~ "/primer/"}}">
+          Primer
+        </a>
+      </h2>
+      <p class="f5">
+        A 10-minute read on what Urbit is and why it exists.
+      </p>
+      <h2 class="f2 mt4 mb2 fw-bold">
+        <a href="{{config.base_url ~ "/posts/"}}">
+          Posts
+        </a>
+      </h2>
+      <p class="f5">
+        Regular updates, occasional essays and media.
+      </p>
+      <h2 class="f2 mt4 mb2 fw-bold">
+        <a href="{{config.base_url ~ "/docs/"}}">
+          Docs
+        </a>
+      </h2>
+      <p class="f5">
+        Installation instructions and complete system documentation.
+      </p>
+      <!-- footer -->
+      {% include "partials/footer.html" %}
   </div>
 </div>
+
 {% endblock content %}

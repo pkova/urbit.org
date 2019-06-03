@@ -1,41 +1,42 @@
 {% block content %}
 <header id="main-nav" class="header">
-  <div class="wrapper">
+  <!-- Panini icon -->
+  <div class="col-left">
     <div id="js-main-nav-toggle" class="header__nav-icon"></div>
   </div>
-  <nav class="header__navigation">
-      <div class="grid-2x1 grid-2x1-ns">
-        <div class="1-1"></div>
-        <div class="2-2 measure-narrow ml4">
-          {% for item in config.extra.urbit_menu %}
-            <h2 class="mt0 mb6">
-              <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                {{ item.name }}
-              </a>
-            </h2>
-          {% endfor %}
-
-          <section class="mb6">
-            <h4 class="mb1 fw-bold">Follow</h4>
-            <a class="mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
-            <a class="mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
-          </section>
-          <section class="mb6">
-            <h4 class="mb1 fw-bold">Contact</h4>
-            <a class="mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
-          </section>
-          <section class="mb6">
-            <h4 class="mb1 fw-bold">Company</h4>
-              {% for item in config.extra.urbit_footer %}
-                <a class="mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+  <div class="col-right">
+    <nav class="header__navigation">
+      <!-- First item -->
+        <div class="">
+          <div class="measure-narrow ml4">
+            {% for item in config.extra.urbit_menu %}
+              <h2 class="mt0 mb6">
+                <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
                   {{ item.name }}
                 </a>
-              {% endfor %}
-          </section>
+              </h2>
+            {% endfor %}
 
-          </div>
-    </div>
-  </nav>
+            <section class="mb6">
+              <h4 class="mb1 fw-bold">Follow</h4>
+              <a class="mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
+              <a class="mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
+            </section>
+            <section class="mb6">
+              <h4 class="mb1 fw-bold">Contact</h4>
+              <a class="mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
+            </section>
+            <section class="mb6">
+              <h4 class="mb1 fw-bold">Company</h4>
+                {% for item in config.extra.urbit_footer %}
+                  <a class="mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                    {{ item.name }}
+                  </a>
+                {% endfor %}
+            </section>
+
+    </nav>
+  </div>
   </div>
 </header>
 {% endblock content %}

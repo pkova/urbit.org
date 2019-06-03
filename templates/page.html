@@ -4,51 +4,35 @@
 <!-- header -->
 {% include "partials/navigation.html" %}
 <!-- content -->
-<div class="">
-
-  <div class="">
-    <!-- <div class="container container--fixed content-nav-container grid-2x1 grid-2x1-ns"> -->
       <div class="grid-2x1 grid-2x1-ns">
       <!-- <div id="js-content-nav-toggle" class="content-nav-icon"></div> -->
-        <nav class="content-nav 1-1">
-          <ul class="list">
-            <li class="list__item content-nav__item">
-              <a href="{{ config.base_url }}/posts/">
+        <div class="one-one fix mt10">
+          <div class="ml7">
+              <a class="block" href="{{ config.base_url }}/posts/">
                 All
               </a>
-            </li>
-            <li class="list__item content-nav__item">
-              <a href="{{ config.base_url }}/posts/essays/">
+              <a class="mt2 block" href="{{ config.base_url }}/posts/essays/">
                 Essays
               </a>
-            </li>
-            <li class="list__item content-nav__item">
-              <a href="{{ config.base_url }}/posts/media/">
+              <a class="mt2 block" href="{{ config.base_url }}/posts/media/">
                 Media
               </a>
-            </li>
-            <li class="list__item content-nav__item">
-              <a href="{{ config.base_url }}/posts/updates/">
+              <a class="mt2 block" href="{{ config.base_url }}/posts/updates/">
                 Updates
               </a>
-            </li>
-          </ul>
-        </nav>
-      <!-- <div class="content-spacer"></div> -->
-      <div class="2-2">
-        <!-- <div class="content-nav-spacer"></div> -->
-        <div class="content posts__content pb40">
-          <article class="article">
-            <!-- header -->
-            <!-- <h4 class="mb8"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
-            <h1 class="mb8">{{ page.title }}</h1>
-            <!-- body -->
-            {{ page.content | safe }}
-          </article>
         </div>
+      <!-- <div class="content-spacer"></div> -->
+    </div>
+    <div class="two-two">
+      <!-- <div class="content-nav-spacer"></div> -->
+      <div class="content posts__content pb40">
+        <article class="md">
+          <!-- header -->
+          <!-- <h4 class="mb8"><code>&#126;{% if page.date %}{{ page.date | date(format="%Y.%m.%d") }}{% endif %}</code></h4> -->
+          <h1 class="mb8">{{ page.title }}</h1>
+          <!-- body -->
+          {{ page.content | safe }}
+        </article>
       </div>
     </div>
-
-  </div>
-</div>
 {% endblock content %}
