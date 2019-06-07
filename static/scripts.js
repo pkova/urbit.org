@@ -5,7 +5,10 @@
 var toggleMainNav = document.getElementById('js-main-nav-toggle');
 if (toggleMainNav !== null) {
   toggleMainNav.onclick = function() {
-    document.body.classList.toggle('has-active-main-nav');
+    // document.body.classList.toggle('bg-white','bg-black');
+    // document.body.classList.add('bg-white','bg-black');
+    document.getElementById('main-nav').classList.toggle('bg-black','container')
+    document.getElementById('js-main-nav-toggle').classList.toggle('nav-icon-close');
   }
 }
 

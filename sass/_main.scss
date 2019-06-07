@@ -177,8 +177,8 @@ body {
 //  */
 //
 .header {
-  position: fixed;
-  height: 96px;
+  // position: fixed;
+  // height: 96px;
   // width: 100%;
   z-index: 2;
   top: 0;
@@ -193,46 +193,69 @@ body {
     display: none;
     padding-top: 32px;
   }
-  &__nav-icon {
+
+}
+
+.nav-icon {
+  margin-left: 32px;
+  width: 24px;
+  height: 24px;
+  // left: 0;
+  top:64px;
+  z-index: 5;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
     position: absolute;
-    margin-left: 32px;
-    width: 24px;
-    height: 24px;
-    left: 0;
-    top:64px;
-    z-index: 3;
-    cursor: pointer;
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      background: #000;
-      margin-bottom: 16px;
-      top: 50%;
-      left: 0;
-      transform-origin: 50%;
-      transition: all 0.1s linear;
-    }
-    &:before {
-      transform: translate(0, -7px);
-    }
-    &:after {
-      transform: translate(0, 7px);
-    }
+    width: 100%;
+    height: 4px;
+    background: #000;
+    margin-bottom: 16px;
+    top: 50%;
+    // left: 0;
+    transform-origin: 50%;
+    transition: all 0.1s linear;
+  }
+  &:before {
+    transform: translate(0, -7px);
+  }
+  &:after {
+    transform: translate(0, 7px);
   }
 }
 //
+
+.nav-icon-close {
+  &:before, &:after {
+    bottom: 0;
+    background: #fff;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
 .has-active-main-nav {
+  // .container{
+  //   background: #000;
+  //   z-index: 4;
+  // }
   .header {
+    background: #000;
     z-index: 4;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    display: block;
     &__navigation {
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      background: #000;
-      overflow-y: hidden;
-      display: block;
+      display:inherit;
+      // height: 100%;
+      // width: 100%;
+      // overflow-y: hidden;
+      // display: block;
     }
     &__nav-icon {
       &:before, &:after {

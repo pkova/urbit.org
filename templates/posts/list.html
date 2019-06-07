@@ -4,45 +4,47 @@
 
 <!-- content -->
   <!-- <header id="main-nav" class="fixed h10 z2 top0"> -->
-
-  <header id="main-nav" class="header">
-    <!-- Panini icon -->
-    <div id="js-main-nav-toggle" class="header__nav-icon"></div>
-    <div class="col-right">
-      <nav class="header__navigation">
-        <!-- First item -->
-            <div class="measure-narrow ml4">
-              {% for item in config.extra.urbit_menu %}
-                <h2 class="mt0 mb6">
-                  <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                    {{ item.name }}
-                  </a>
-                </h2>
-              {% endfor %}
-              </div>
-
-              <section class="mb6">
-                <h4 class="mb1 fw-bold">Follow</h4>
-                <a class="mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
-                <a class="mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
-              </section>
-              <section class="mb6">
-                <h4 class="mb1 fw-bold">Contact</h4>
-                <a class="mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
-              </section>
-              <section class="mb6">
-                <h4 class="mb1 fw-bold">Company</h4>
-                  {% for item in config.extra.urbit_footer %}
-                    <a class="mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+<div class="header">
+  <!-- <header id="main-nav" class=" none pt6"> -->
+    <header id="main-nav" class="none pt6">
+      <div class="col-right">
+          <!-- First item -->
+              <div class="measure-narrow">
+                {% for item in config.extra.urbit_menu %}
+                  <h2 class="mt0 mb6">
+                    <a class="white" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
                       {{ item.name }}
                     </a>
-                  {% endfor %}
-              </section>
-      </nav>
+                  </h2>
+                {% endfor %}
+                </div>
+
+                <section class="white mb6">
+                  <h4 class="mb1 fw-bold">Follow</h4>
+                  <a class="white mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
+                  <a class="white mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
+                </section>
+                <section class="white mb6">
+                  <h4 class="mb1 fw-bold">Contact</h4>
+                  <a class="white mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
+                </section>
+                <section class="white mb6">
+                  <h4 class="mb1 fw-bold">Company</h4>
+                    {% for item in config.extra.urbit_footer %}
+                      <a class="white mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                        {{ item.name }}
+                      </a>
+                    {% endfor %}
+                </section>
+        </div>
+      </div>
   </header>
+  </div>
 
     <div class="container container-ns">
+
     <div class="col-left col-left-ns">
+      <div id="js-main-nav-toggle" class="nav-icon fixed"></div>
       <div class="fix mt9 ml7">
         <a class="mt9 block" href="{{ config.base_url }}/posts/">
           All
