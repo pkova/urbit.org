@@ -4,75 +4,74 @@
 
 <!-- content -->
   <!-- <header id="main-nav" class="fixed h10 z2 top0"> -->
-<div class="header">
+<div id="main-nav" style="width: 100vw; height: 100vh" class="fix header bg-black hidden">
   <!-- <header id="main-nav" class=" none pt6"> -->
-    <header id="main-nav" class="none pt6">
+    <header  class="pt9 container">
       <div class="col-right">
           <!-- First item -->
-              <div class="measure-narrow">
-                {% for item in config.extra.urbit_menu %}
-                  <h2 class="mt0 mb6">
-                    <a class="white" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                      {{ item.name }}
-                    </a>
-                  </h2>
-                {% endfor %}
-                </div>
+        <div class="measure-narrow">
+          {% for item in config.extra.urbit_menu %}
+            <h2 class="mt0 mb6">
+              <a class="white" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                {{ item.name }}
+              </a>
+            </h2>
+          {% endfor %}
+          </div>
 
-                <section class="white mb6">
-                  <h4 class="mb1 fw-bold">Follow</h4>
-                  <a class="white mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
-                  <a class="white mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
-                </section>
-                <section class="white mb6">
-                  <h4 class="mb1 fw-bold">Contact</h4>
-                  <a class="white mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
-                </section>
-                <section class="white mb6">
-                  <h4 class="mb1 fw-bold">Company</h4>
-                    {% for item in config.extra.urbit_footer %}
-                      <a class="white mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
-                        {{ item.name }}
-                      </a>
-                    {% endfor %}
-                </section>
+          <section class="white mb6">
+            <h4 class="mb1 fw-bold">Follow</h4>
+            <a class="white mono mb2 block" href="https://twitter.com/urbit">twitter.com/urbit</a>
+            <a class="white mono mb2 block" href="https://github.com/urbit/">github.com/urbit</a>
+          </section>
+          <section class="white mb6">
+            <h4 class="mb1 fw-bold">Contact</h4>
+            <a class="white mono mb2 block" href="mailto:support@urbit.org">support@urbit.org</a>
+          </section>
+          <section class="white mb6">
+            <h4 class="mb1 fw-bold">Company</h4>
+              {% for item in config.extra.urbit_footer %}
+                <a class="white mono mb2 block" href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                  {{ item.name }}
+                </a>
+              {% endfor %}
+          </section>
         </div>
       </div>
-  </header>
+    </header>
   </div>
 
-    <div class="container container-ns">
+<div class="container container-ns">
+  <div class="col-left col-left-ns">
+    <div id="js-main-nav-toggle" class="nav-icon fixed"></div>
+    <div class="fix mt9 ml7">
+      <a class="mt9 block" href="{{ config.base_url }}/posts/">
+        All
+      </a>
+      {% for post in terms %}
+          <a class="mt2 block" href="{{ post.permalink }}">
+            {{ post.name }}
+          </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-right col-right-ns mt8">
+    <div class="measure-narrow">
+      <h1 class="f1 mb4 fw-bold">Posts</h1>
+        {% set posts = get_section(path="posts/_index.md") %}
+        {% for page in posts.pages %}
+          <div class="mb8">
 
-    <div class="col-left col-left-ns">
-      <div id="js-main-nav-toggle" class="nav-icon fixed"></div>
-      <div class="fix mt9 ml7">
-        <a class="mt9 block" href="{{ config.base_url }}/posts/">
-          All
-        </a>
-        {% for post in terms %}
-            <a class="mt2 block" href="{{ post.permalink }}">
-              {{ post.name }}
-            </a>
+            <a href="{{ page.permalink }}"><h2 class="mt1 fw-bold">{{ page.title }}</h2></a>
+            <p class="mv3 f5">{{ page.description }}</p>
+
+            <span class="h4 mb0 mono gray-50">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+            <span class="h4 mt0 mb0">{% if page.taxonomies.posts %}
+              {% for post in page.taxonomies.posts %}<a class="gray-50"  href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
+            {% endif %}
+          </span>
+          </div>
         {% endfor %}
-      </div>
     </div>
-    <div class="col-right col-right-ns mt8">
-      <div class="measure-narrow">
-        <h1 class="f1 mb4 fw-bold">Posts</h1>
-          {% set posts = get_section(path="posts/_index.md") %}
-          {% for page in posts.pages %}
-            <div class="mb8">
-
-              <a href="{{ page.permalink }}"><h2 class="mt1 fw-bold">{{ page.title }}</h2></a>
-              <p class="mv3 f5">{{ page.description }}</p>
-
-              <span class="h4 mb0 mono gray-50">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
-              <span class="h4 mt0 mb0">{% if page.taxonomies.posts %}
-                {% for post in page.taxonomies.posts %}<a class="gray-50"  href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
-              {% endif %}
-            </span>
-            </div>
-          {% endfor %}
-      </div>
-    </div>
+  </div>
 {% endblock content %}
