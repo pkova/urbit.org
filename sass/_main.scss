@@ -2,11 +2,8 @@
  * core
  */
 
-body {
+* {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 3.5rem;
-  line-height: 6rem;
-  color: #000000;
 }
 
 a {
@@ -14,7 +11,7 @@ a {
 }
 
 p img {
-  margin: 4rem 0;
+  margin: 16px 0;
   width: 100%;
 }
 
@@ -27,13 +24,13 @@ iframe {
  */
 
 .main-wrapper {
-  margin-top: 24rem;
+  margin-top: 96px;
 }
 
 .wrapper {
   position: relative;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 8px;
   max-width: 960px;
 }
 
@@ -44,34 +41,33 @@ iframe {
 .pop-up {
   width: 100%;
   max-width: 600px;
-  margin: 28rem auto;
+  margin: 112px auto;
   background: #fff;
 }
 
 .container--fixed {
   position: fixed;
-  margin-top: -24rem;
+  margin-top: -96px;
 }
 
 .content-nav {
   width: 20%;
   min-width: 200px;
-  //padding-right: 1rem;
-  margin-top: 24rem;
+  margin-top: 96px;
   &__item {
-    line-height: 8rem;
-    margin-bottom: 1rem;
+    line-height: 32px;
+    margin-bottom: 4px;
   }
   li {
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
 .content-nav-icon {
   position: fixed;
-  left: 2rem;
-  top: 24rem;
+  left: 8px;
+  top: 96px;
   width: 10px;
   height: 10px;
   cursor: pointer;
@@ -97,12 +93,12 @@ iframe {
       overflow-y: scroll;
       &__item {
         &:last-child{
-          padding-bottom: 8rem;
+          padding-bottom: 32px;
         }
       }
     }
     .list:first-child {
-      padding-bottom: 14rem;
+      padding-bottom: 56px;
     }
     .list li:last-child .subsub-list li:last-child {
       padding-bottom: 0;
@@ -113,10 +109,10 @@ iframe {
 .content-nav-spacer {
   width: 20%;
   min-width: 200px;
-  padding-right: 5rem;
+  padding-right: 20px;
   &__item {
-    line-height: 8rem;
-    margin-bottom: 1rem;
+    line-height: 32px;
+    margin-bottom: 4px;
   }
 }
 
@@ -128,7 +124,7 @@ iframe {
 .content {
   position: relative;
   z-index: 3;
-  margin-top: -16rem;
+  margin-top: -64px;
 }
 
 .content-nav-icon {
@@ -147,12 +143,12 @@ iframe {
 }
 
 .sub-list {
-  padding-left: 4rem;
+  padding-left: 16px;
   .sub-list {
     padding-left: 0;
   }
   .subsub-list {
-    padding-left: 4rem;
+    padding-left: 16px;
   }
 }
 
@@ -167,12 +163,12 @@ iframe {
   display: flex;
   justify-content: flex-start;
   .list__item {
-    margin-right: 4rem;
+    margin-right: 16px;
   }
 }
 
 .body-regular {
-  margin-bottom: 7rem;
+  margin-bottom: 28px;
 }
 
 .video-wrapper {
@@ -196,7 +192,7 @@ iframe {
 
 .header {
   position: fixed;
-  height: 24rem;
+  height: 96px;
   width: 100%;
   z-index: 2;
   top: 0;
@@ -209,24 +205,24 @@ iframe {
                         supported by Chrome and Opera */
   &__navigation {
     display: none;
-    padding-top: 9rem;
+    padding-top: 36px;
   }
   &__nav-icon {
     position: absolute;
-    margin-left: 2rem;
-    width: 6rem;
-    height: 10rem;
+    margin-left: 8px;
+    width: 24px;
+    height: 40px;
     left: 0;
-    top: 6rem;
+    top: 24px;
     z-index: 3;
     cursor: pointer;
     &:before, &:after {
       content: '';
       position: absolute;
       width: 100%;
-      height: 1rem;
+      height: 4px;
       background: #000;
-      margin-bottom: 4rem;
+      margin-bottom: 16px;
       top: 50%;
       left: 0;
       transform-origin: 50%;
@@ -273,7 +269,7 @@ iframe {
 .posts {
   &__content {
     z-index: 3;
-    margin-left: -8rem;
+    margin-left: -32px;
   }
 }
 
@@ -318,14 +314,13 @@ iframe {
       }
     }
     &__input {
-      line-height: 6rem;
+      line-height: 24px;
     }
   }
 }
 
 .search-results {
   max-height: 400px;
-  //&__item, &__item a,
   &__header {
     color: #B1B2B3;
   }
@@ -333,7 +328,7 @@ iframe {
     a {
       text-decoration: none;
       display: block;
-      padding: 3rem 4rem;
+      padding: 12px 16px;
       &:hover {
         background: #F9F9F9;
         &:before, &:after {
@@ -363,23 +358,23 @@ iframe {
     position: relative;
     transition: all 0.1s linear;
     &:last-child {
-      margin-bottom: 2rem;
+      margin-bottom: 8px;
     }
     b {
       color: #000;
     }
     &__title {
-      font-size: 6rem;
+      font-size: 24px;
       text-transform: capitalize;
       &__slug-end {
         color: #000;
         font-weight: 700;
-        padding-right: 8rem;
+        padding-right: 32px;
       }
     }
   }
   &__header {
-    padding: 0 7rem;
+    padding: 0 28px;
   }
 }
 
@@ -395,8 +390,6 @@ iframe {
 
 textarea, input[type="text"], input[type="email"], input[type="number"], input[type="search"] {
   border: 1px solid #B1B2B3;
-  font-size: 4rem;
-  line-height: 6rem;
   transition: all 0.1s linear;
   padding-right: 40px;
   position: relative;
@@ -417,12 +410,8 @@ textarea, input[type="text"], input[type="email"], input[type="number"], input[t
 
 button, .btn {
   font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 500;
-  font-size: 4rem;
-  line-height: 4rem;
   user-select: none;
-  padding: 3rem 6rem;
-  margin: 0 0 6px;
+  padding: 12px 24px;
   border: none;
   cursor: pointer;
 }
@@ -430,8 +419,6 @@ button, .btn {
 .search-bar {
   border: 1px solid #B1B2B3;
   background: #fff;
-  font-size: 4rem;
-  line-height: 6rem;
   transition: all 0.1s linear;
   padding: 12px 12px 12px 40px;
   position: relative;
@@ -526,83 +513,50 @@ button, .btn {
   font-weight: 700;
 }
 
-.h-font {
-  text-transform: lowercase;
-}
-
-h1, h2, h3, h4, h5, h6, .text-heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
   margin: 0;
-  font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
 }
 
-h1, h2, h3, h4 {
-  font-weight: 700;
-}
-h1 {
-  font-size: 8rem;
-  line-height: 8rem;
-}
-h2 {
-  font-size: 6rem;
-  line-height: 6rem;
-}
-h3 {
-  font-size: 5rem;
-  line-height: 5rem;
-}
-h4 {
-  font-size: 4.5rem;
-  line-height: 4.5rem;
-}
-h5 {
-  font-size: 4rem;
-  line-height: 4rem;
+.underline {
+  text-decoration: underline;
 }
 
 .article {
   h1 {
-    margin-bottom: 7rem;
+    margin-bottom: 28px;
   }
   h2 {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
+    margin-top: 32px;
+    margin-bottom: 16px;
   }
   h3 {
-    margin-top: 7rem;
-    margin-bottom: 3rem;
+    margin-top: 28px;
+    margin-bottom: 12px;
   }
   h4 {
-    margin-top: 6.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 26px;;
+    margin-bottom: 10px;
   }
   h5 {
-    margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-top: 24px;
+    margin-bottom: 8px;
   }
-}
-
-li {
-  font-size: 4rem;
-  line-height: 8rem;
-  font-weight: 400;
-}
-
-p, .p {
-  font-size: 4rem;
-  font-weight: 400;
-  line-height: 8rem;
-  margin: 0 0 4rem;
+  li {
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: underline;
+  }
 }
 
 pre, code {
-  font-family: "Source Code Pro", monospace;
-  background-color: #eee !important;
-  color: #000 !important;
   overflow-y: scroll;
-  font-weight: 400;
-  span {
-    color: #000 !important;
-  }
-  padding: 1rem;
-  font-size: 4rem;
+  padding: 4px;
 }

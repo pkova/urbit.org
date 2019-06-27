@@ -11,13 +11,13 @@
       <nav class="content-nav">
         <ul class="list">
           <li class="list__item content-nav__item">
-            <a href="{{ config.base_url }}/posts/">
+            <a class="underline" href="{{ config.base_url }}/posts/">
               All
             </a>
           </li>
           {% for post in terms %}
             <li class="list__item content-nav__item">
-              <a href="{{ post.permalink }}">
+              <a class="underline" href="{{ post.permalink }}">
                 {{ post.name }}
               </a>
             </li>
@@ -36,9 +36,9 @@
             <li class="list__item mb8">
               <span class="h4 mt0 mb0 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
               <span class="h4 mt0 mb0 h-font">{% if page.taxonomies.posts %}
-                {% for post in page.taxonomies.posts %}<a href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
+                {% for post in page.taxonomies.posts %}<a class="underline" href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
               {% endif %}</span>
-              <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
+              <a href="{{ page.permalink }}"><h2 class="mt1 underline">{{ page.title }}</h2></a>
               <p class="mt3">{{ page.description }}</p>
             </li>
           {% endfor %}

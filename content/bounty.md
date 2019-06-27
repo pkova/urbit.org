@@ -1,6 +1,7 @@
 +++
 title = "Bug Bounty + Security"
 +++
+
 ## Upcoming Bug Bounty Program
 
 We are in the process of designing our Bug Bounty Program, and it should be live in several days. In the meantime, if you believe you have discovered a bug or vulnerability in our code, please report it at security@tlon.io.
