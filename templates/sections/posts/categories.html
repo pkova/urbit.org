@@ -37,9 +37,9 @@
     <div class="container">
       <div class="content-nav-spacer"></div>
       <article class="content posts__content">
-        <h1 class="mb8">{{ term.name }}</h1>
+        <h1 class="mb8">{{ section.title }}</h1>
         <ul class="list">
-          {% for page in term.pages %}
+          {% for page in section.pages %}
             <li class="list__item mb8">
               <span class="h4 mt0 mb0 mr2 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
               <span class="h4 mt0 mb0 lowercase">{% if page.taxonomies.posts %}

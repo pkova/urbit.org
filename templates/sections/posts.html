@@ -15,10 +15,12 @@
               All
             </a>
           </li>
-          {% for post in terms %}
+          {% set index = get_section(path="posts/_index.md") %}
+          {% for s in index.subsections %}
+            {% set subsection = get_section(path=s) %}
             <li class="list__item content-nav__item">
-              <a href="{{ post.permalink }}">
-                {{ post.name }}
+              <a href="{{ subsection.permalink }}">
+                {{ subsection.title }}
               </a>
             </li>
           {% endfor %}
@@ -29,7 +31,7 @@
     <div class="container">
       <div class="content-nav-spacer"></div>
       <article class="content posts__content">
-        <h1 class="mb8">Posts</h1>
+        <h1 class="mb8">{{ section.title }}</h1>
         <ul class="list">
           {% set posts = get_section(path="posts/_index.md") %}
           {% for page in posts.pages %}
@@ -41,6 +43,23 @@
               <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
               <p class="mt3">{{ page.description }}</p>
             </li>
+          {% endfor %}
+          {% set index = get_section(path="posts/_index.md") %}
+          {% for s in index.subsections %}
+            {% set subsection = get_section(path=s) %}
+            {% if subsection.pages %}
+            <!-- level 1 -->
+              {% for page in subsection.pages %}
+              <li class="list__item mb8">
+                <span class="h4 mt0 mb0 mr2 mono">&#126;{{ page.date | date(format="%Y.%m.%d") }}</span>
+                <span class="h4 mt0 mb0 lowercase">{% if page.taxonomies.posts %}
+                  {% for post in page.taxonomies.posts %}<a href="{{ get_taxonomy_url(kind="posts", name=post) }}">{{ post }}</a> {% endfor %}
+                {% endif %}</span>
+                <a href="{{ page.permalink }}"><h2 class="mt1">{{ page.title }}</h2></a>
+                <p class="mt3">{{ page.description }}</p>
+              </li>
+              {% endfor %}
+            {% endif %}
           {% endfor %}
         </ul>
       </article>

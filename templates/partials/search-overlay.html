@@ -1,0 +1,15 @@
+{% block content %}
+<div id="search-overlay" class="search-overlay fixed max-dimensions none">
+  <div class="wrapper">
+    <div id="search-window" class="pop-up">
+      <div class="search-bar border-none p0 mb2 bg-white t-left relative transition box-shadow-override gray3 lh24">
+        <input id="search" autocomplete="off" type="search" class="search-bar__input lh24 pl10" placeholder="Go to...">
+      </div>
+      <div class="search-results">
+        <div class="search-results__header mb2"></div>
+        <ul class="list search-results__items"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

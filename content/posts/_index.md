@@ -1,4 +1,4 @@
 +++
-render = false
-sort_by = "date"
+title = "Posts"
+template = "sections/posts.html"
 +++
