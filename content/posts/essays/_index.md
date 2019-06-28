@@ -1,5 +1,5 @@
 +++
 title = "Essays"
 sort_by = "date"
-template = "sections/posts/categories.html"
+template = "sections/posts/categories.html" 
 +++

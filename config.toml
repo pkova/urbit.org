@@ -29,9 +29,9 @@ build_search_index = true
 #       {name = "authors"}, # Basic definition: no RSS or pagination
 #     ]
 #
-taxonomies = [
-    {name = "posts", rss = true},
-]
+#taxonomies = [
+#    {name = "posts", rss = true},
+#]
 
 [extra]
 urbit_menu = [
