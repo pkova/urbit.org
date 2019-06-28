@@ -283,39 +283,56 @@ iframe {
 }
 
 .search-overlay {
-  position: fixed;
-  height: 100%;
-  width: 100%;
   background: rgba(0,0,0,0.4);
   top: 0;
   left: 0;
   z-index: 10;
-  display: none;
-  .search-bar {
-    padding: 0;
+}
+
+.search-overlay .search-bar {
+  &:before {
+    z-index: 1;
+  }
+  &:hover, &:active, &:focus {
     border: none;
-    &__input {
-      padding-left: 40px;
+  }
+  input[type="search"] {
+    &:hover, &:active, &:focus {
       border-left: none;
       border-top: none;
       border-right: none;
     }
-    &:before {
-      z-index: 1;
-    }
-    &:hover, &:active, &:focus {
-      border: none;
-    }
-    input[type="search"] {
-      &:hover, &:active, &:focus {
-        border-left: none;
-        border-top: none;
-        border-right: none;
-      }
-    }
-    &__input {
-      line-height: 24px;
-    }
+  }
+}
+
+.search-overlay .search-bar__input {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  padding-left: 40px;
+}
+
+.search-bar {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin-top: -4px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 23px;
+    top: 25px;
+    transform: rotate(-45deg);
+    background: #000;
+    width: 2px;
+    height: 9px;
   }
 }
 
@@ -329,6 +346,7 @@ iframe {
       text-decoration: none;
       display: block;
       padding: 12px 16px;
+      line-height: 1.5;
       &:hover {
         background: #F9F9F9;
         &:before, &:after {
@@ -343,14 +361,14 @@ iframe {
           border-top: 2px solid #000;
           border-right: 2px solid #000;
           transform: rotate(45deg);
-          top: 17px;
+          top: 27px;
         }
         &:after {
           content: '';
           width: 17px;
           height: 2px;
           background: #000;
-          top: 22px;
+          top: 32px;
           right: 39px;
         }
       }
@@ -369,7 +387,7 @@ iframe {
       &__slug-end {
         color: #000;
         font-weight: 700;
-        padding-right: 32px;
+        padding-right: 50px;
       }
     }
   }
@@ -414,42 +432,6 @@ button, .btn {
   padding: 12px 24px;
   border: none;
   cursor: pointer;
-}
-
-.search-bar {
-  border: 1px solid #B1B2B3;
-  background: #fff;
-  transition: all 0.1s linear;
-  padding: 12px 12px 12px 40px;
-  position: relative;
-  font-weight: normal;
-  text-align: left;
-  box-shadow: none !important;
-  color: #B1B2B3;
-  &:after {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    margin-top: -4px;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    left: 23px;
-    top: 25px;
-    transform: rotate(-45deg);
-    background: #000;
-    width: 2px;
-    height: 9px;
-  }
-  &:hover {
-    border: 1px solid #000000;
-  }
 }
 
 .has-valid-input {
@@ -560,3 +542,60 @@ pre, code {
   overflow-y: scroll;
   padding: 4px;
 }
+
+/*
+ atomized
+ */
+
+.max-dimensions {
+  height: 100%;
+  width: 100%;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-gray3 {
+  border: 1px solid #B1B2B3;
+  &:hover {
+    border: 1px solid #000000;
+  }
+}
+
+.lh24 {
+  line-height: 24px;
+}
+
+.transition {
+  transition: all 0.1s linear;
+}
+
+.box-shadow-override {
+  box-shadow: none !important;
+}
+
+// already in indigo but are overwritten by my custom css right now, because the font won't load with just the help of Indigo
+
+.p0 {
+  padding: 0;
+}
+
+.p3 {
+  padding: 12px;
+}
+
+.pl10 {
+  padding-left: 40px;
+}
+
+.relative,
+.rel {
+  position: relative;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+// end atomize
