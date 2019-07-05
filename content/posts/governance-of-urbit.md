@@ -6,7 +6,10 @@ description = "On Stewardship of the Urbit project"
 aliases = ["/posts/essays/governance-of-urbit"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://storage.googleapis.com/media.urbit.org/site/governance-1.svg"
 +++
+
 ![](https://storage.googleapis.com/media.urbit.org/site/governance-1.svg)
 
 ## Summary

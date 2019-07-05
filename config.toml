@@ -49,5 +49,8 @@ urbit_footer = [
 
 docs_number_chapters = true
 
+[extra.opengraph]
+ogimg = true
+
 [extra.author]
 name = "urbit.org"

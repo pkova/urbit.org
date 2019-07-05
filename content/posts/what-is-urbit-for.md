@@ -6,7 +6,10 @@ description = "A vision of the Urbit-powered future."
 aliases = ["/posts/essays/what-is-urbit-for"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-1.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-1.jpg)
 
 Open platforms don't beat closed systems just because they're open.

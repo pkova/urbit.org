@@ -6,6 +6,8 @@ description = "Announcing an upcoming Urbit grants program and star gifts for Mi
 aliases = ["/posts/essays/urbit-grants-and-mid-2019-gifts"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-gifts-1.jpg"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/urbit-grants-and-mid-2019-gifts-1.jpg)
@@ -27,13 +29,13 @@ That is, our winners from the past nine months:
 - John `~dirwex-dosrev` [@jfranklin9000](https://github.com/jfranklin9000)
 - Assaf `~rophex-hashes` [@asssaf](https://github.com/asssaf)
 
-**Pyry** has been a [regular contributor](https://github.com/urbit/bridge/pulls?utf8=%E2%9C%93&q=author%3Apkova) to Bridge over the past few months, **John** has been consistently picking up changes [all](https://github.com/urbit/urbit/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [over](https://github.com/urbit/arvo/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [the place](https://github.com/urbit/docs/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000), and **Assaf** found a [security issue](https://github.com/urbit/urbit-key-generation/issues/55) with our hierarchical wallet. 
+**Pyry** has been a [regular contributor](https://github.com/urbit/bridge/pulls?utf8=%E2%9C%93&q=author%3Apkova) to Bridge over the past few months, **John** has been consistently picking up changes [all](https://github.com/urbit/urbit/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [over](https://github.com/urbit/arvo/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000) [the place](https://github.com/urbit/docs/pulls?utf8=%E2%9C%93&q=author%3Ajfranklin9000), and **Assaf** found a [security issue](https://github.com/urbit/urbit-key-generation/issues/55) with our hierarchical wallet.
 
 Thanks to all of you for helping bring Urbit to life. We don’t make it nearly easy enough to contribute, but all of you clawed your way in and made the system better. Thank you!
 
 ## Coming soon: Our new grant program
 
-As always, we much prefer to talk about working code as opposed to unfinished work – however: 
+As always, we much prefer to talk about working code as opposed to unfinished work – however:
 
 Making the process of rewarding contributors is something we’ve thought a lot about over the past few months. We’ve come up with a system that we like, and are hoping to put it up later this summer. It’s probably not perfect, but it’s a step in the right direction. We’ll be able to properly engage in a grant proposal process, post bounties as well as reward people directly with prizes.
 

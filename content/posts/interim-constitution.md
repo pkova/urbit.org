@@ -6,7 +6,10 @@ description = "The governing rules for the early days of the Urbit network."
 aliases = ["/posts/essays/interim-constitution"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-7.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-7.jpg)
 
 ## Declaration of purpose

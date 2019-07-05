@@ -6,7 +6,10 @@ description = "We believe."
 aliases = ["/posts/essays/beliefs-and-principles"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-2.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-2.jpg)
 
 ## Beliefs

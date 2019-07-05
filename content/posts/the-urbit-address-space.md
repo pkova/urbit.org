@@ -6,7 +6,10 @@ description = "An overview of Urbit's cryptographic address space."
 aliases = ["/posts/essays/the-urbit-address-space"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-3.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-3.jpg)
 
 ## Basics

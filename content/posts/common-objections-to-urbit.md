@@ -6,7 +6,10 @@ description = "Some common objections to Urbit, discussed."
 aliases = ["/posts/essays/common-objections-to-urbit"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-9.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-9.jpg)
 
 We love crowdsourced criticism.  We've heard a lot of great

@@ -6,6 +6,8 @@ description = "What if everyone had a single 'civilizational key'?"
 aliases = ["/posts/essays/azimuth-as-multipass/"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png"
 +++
 
 ![](https://media.urbit.org/site/posts/essays/azimuth-as-multipass-1.png)

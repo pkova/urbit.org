@@ -6,7 +6,10 @@ description = "A high-level overview of Urbit."
 aliases = ["/posts/essays/an-urbit-overview"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-0.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-0.jpg)
 
 ## What Urbit is

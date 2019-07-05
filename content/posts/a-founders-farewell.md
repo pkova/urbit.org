@@ -6,6 +6,8 @@ description = "My goal was always to fire myself at the first possible opportuni
 aliases = ["/posts/essays/a-founders-farewell"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://storage.googleapis.com/media.urbit.org/site/farewell.png"
 +++
 
 ![Curtis Yarvin portrait](https://storage.googleapis.com/media.urbit.org/site/farewell.png)

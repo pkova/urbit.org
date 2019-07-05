@@ -6,7 +6,10 @@ description = "Urbit (probably) doesn't need a blockchain, because the Urbit add
 aliases = ["/posts/essays/why-urbit-probably-does-not-need-a-blockchain/"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://media.urbit.org/site/blog-1.jpg"
 +++
+
 ![](https://media.urbit.org/site/blog-1.jpg)
 
 TLDR: Urbit (probably) doesn't need a blockchain, because the Urbit

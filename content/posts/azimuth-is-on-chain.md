@@ -6,7 +6,10 @@ description = "The Urbit address space, now called Azimuth, is on the blockchain
 aliases = ["/posts/essays/azimuth-is-on-chain"]
 [taxonomies]
 posts = ["Essays"]
+[extra.opengraph]
+ogimg = "https://storage.googleapis.com/media.urbit.org/site/arvo-4.svg"
 +++
+
 ![](https://storage.googleapis.com/media.urbit.org/site/arvo-4.svg)
 
 The Urbit address space is now live on the Ethereum blockchain. We’re calling the PKI ‘Azimuth’ and you can find it at [`0x223c067f8cf28ae173ee5cafea60ca44c335fecb`](https://etherscan.io/address/0x223c067f8cf28ae173ee5cafea60ca44c335fecb) or [`azimuth.eth`](https://etherscan.io/address/azimuth.eth). Owners of Azimuth ‘points’ (galaxies, stars or planets) can use [Bridge](https://github.com/urbit/bridge/releases) to manage them and view their balance now.
